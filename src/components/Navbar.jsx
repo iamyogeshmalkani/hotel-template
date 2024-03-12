@@ -21,7 +21,7 @@ export default function Navbar() {
 
     return (
         <div>
-            <div className='flex flex-row justify-between gap-16 items-center px-24 h-20 bg-transparent shadow-lg'>
+            <div className='flex flex-row justify-between gap-16 items-center px-10 h-20 bg-transparent shadow-lg'>
                 <img src='Logo.webp' className='h-14' />
                 {(currentDevice === "large" || currentDevice === "extra-large") ? <div className='flex flex-row gap-7'>
                     {
