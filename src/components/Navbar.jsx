@@ -20,8 +20,8 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div>
-            <div className='flex flex-row justify-between gap-16 items-center px-10 h-20 bg-transparent shadow-lg'>
+        <div className='sticky top-0'>
+            <div className='flex flex-row justify-between gap-16 items-center px-10 h-20 bg-[rgba(255,255,255,.5)] shadow-lg'>
                 <img src='Logo.webp' className='h-14' />
                 {(currentDevice === "large" || currentDevice === "extra-large") ? <div className='flex flex-row gap-7'>
                     {
@@ -40,11 +40,11 @@ export default function Navbar() {
 
             </div>
             {(currentDevice !== "large" && currentDevice !== "extra-large") && openMenu &&
-                <div className='fixed right-0 flex flex-col gap-4 py-2 bg-red-500 w-[50vw] h-[100vh] shadow-lg bg-transparent'>
+                <div className='fixed right-0 flex flex-col gap-4 py-2  w-[50vw] h-[100vh] shadow-lg bg-[rgba(0,0,0,.5)]'>
                     {
                         NAVBARPAGES.map((page) => {
                             return (
-                                <p className='text-text text-lg font-Lora font-bold cursor-pointer w-full border-b px-2' > {page}</p>
+                                <p className='opacity-1 text-text text-lg font-Lora font-bold cursor-pointer w-full border-b px-2' > {page}</p>
                             )
                         })
                     }

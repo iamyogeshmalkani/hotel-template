@@ -4,12 +4,14 @@ module.exports = {
         "./src/**/*.{js,jsx,ts,tsx}",
     ],
     theme: {
-        colors: {
-            text: "#2D7322"
-        },
+
         extend: {
             fontFamily: {
                 Lora: ["Lora", "serif"],
+            },
+            colors: {
+                text: "#2D7322",
+                pagebg: "#F9FDF8"
             },
         },
     },
