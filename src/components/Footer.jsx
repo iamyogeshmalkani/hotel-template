@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa6'
 
 export default function Footer() {
     return (
-        <div className='flex flex-col gap-10 py-10 justify-center items-center w-full font-normal bg-red-500 text-white'>
+        <footer className=' flex flex-col gap-10 py-10 justify-center items-center w-full font-normal bg-red-500 text-white'>
             <div className='flex flex-col gap-2 justify-center items-center max-w-[80%] '>
                 <p>{HOTEL_NAME}</p>
                 <p>{HOTEL_ADDRESS}</p>
@@ -43,6 +43,6 @@ export default function Footer() {
                 </div>
             </div>
 
-        </div>
+        </footer>
     )
 }

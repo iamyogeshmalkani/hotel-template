@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { NAVBARPAGES } from '../constants'
 import { getDeviceSize } from '../utils/utils'
 import { CiMenuBurger } from "react-icons/ci";
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     const [currentDevice, setCurrentDevice] = useState(getDeviceSize())
@@ -27,7 +28,9 @@ export default function Navbar() {
                     {
                         NAVBARPAGES.map((page) => {
                             return (
-                                < p className='text-text text-lg font-Lora font-bold cursor-pointer' > {page}</p>
+                                <Link to={page}>
+                                    < p className='text-text text-lg font-Lora font-bold cursor-pointer' > {page}</p>
+                                </Link>
                             )
                         })
                     }
@@ -40,11 +43,13 @@ export default function Navbar() {
 
             </div>
             {(currentDevice !== "large" && currentDevice !== "extra-large") && openMenu &&
-                <div className='fixed right-0 flex flex-col gap-4 py-2  w-[50vw] h-[100vh] shadow-lg bg-[rgba(0,0,0,.5)]'>
+                <div className='fixed right-0 flex flex-col gap-4 py-2  w-[50vw] h-[100vh] shadow-lg bg-[rgba(255,255,255,.7)]'>
                     {
                         NAVBARPAGES.map((page) => {
                             return (
-                                <p className='opacity-1 text-text text-lg font-Lora font-bold cursor-pointer w-full border-b px-2' > {page}</p>
+                                <Link to={page}>
+                                    <p className=' text-text text-lg font-Lora font-bold cursor-pointer w-full border-b px-2' > {page}</p>
+                                </Link>
                             )
                         })
                     }
