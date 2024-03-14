@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Carousel } from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function CustomCarousel({ child }) {
     return (
@@ -50,10 +51,10 @@ export default function CustomCarousel({ child }) {
             }}
         >
             <div>
-                <img src='images/Hotel1.jpg' className='w-full' />
+                <img src='images/Hotel1.jpg' className='w-full h-[600px] object-cover ' />
             </div>
             <div>
-                <img src='images/Hotel1.jpg' className='w-full' />
+                <img src='images/Hotel1.jpg' className='w-full h-[600px] object-cover ' />
             </div>
         </Carousel>
     )

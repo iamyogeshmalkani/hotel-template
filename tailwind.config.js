@@ -16,6 +16,19 @@ module.exports = {
                 primary: "#D6D6D6",
                 tertiary: "#1F2516"
             },
+            // animation: {
+            //     "zoom-in-zoom-out": {
+            //         "0%": {
+            //             transform: scale(1, 1)
+            //         },
+            //         "50%": {
+            //             transform: scale(1.5, 1.5)
+            //         },
+            //         "100%": {
+            //             transform: scale(1, 1)
+            //         }
+            //     }
+            // }
         },
     },
     plugins: [],

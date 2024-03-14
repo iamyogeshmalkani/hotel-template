@@ -28,13 +28,15 @@ export default function Navbar() {
                     {
                         NAVBARPAGES.map((page) => {
                             return (
-                                < p className='text-secondary text-lg font-Lora font-bold cursor-pointer' onClick={() => {
-                                    if (page === "Home") {
-                                        window.location.href = "/"
-                                    } else {
-                                        window.location.href = page
-                                    }
-                                }}> {page}</p>
+                                < p className='text-secondary text-lg font-Lora font-bold cursor-pointer'
+                                    onClick={() => {
+                                        if (page === "Home") {
+                                            window.location.href = "/"
+                                        } else {
+                                            window.location.href = page
+                                        }
+                                    }}
+                                > {page}</p>
                             )
                         })
                     }
@@ -52,9 +54,17 @@ export default function Navbar() {
                     {
                         NAVBARPAGES.map((page) => {
                             return (
-                                <Link to={page}>
-                                    <p className=' text-secondary text-lg font-Lora font-bold cursor-pointer w-full border-b px-2' > {page}</p>
-                                </Link>
+
+                                <p className=' text-secondary text-lg font-Lora font-bold cursor-pointer w-full border-b px-2'
+                                    onClick={() => {
+                                        if (page === "Home") {
+                                            window.location.href = "/"
+                                        } else {
+                                            window.location.href = page
+                                        }
+                                    }}
+                                > {page}</p>
+
                             )
                         })
                     }

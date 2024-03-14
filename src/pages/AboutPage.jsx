@@ -2,7 +2,6 @@ import React from 'react'
 import { ABOUT_US_DESCRIPTION, HOTEL_NAME } from '../constants'
 import HotelAmenities from '../components/HotelAmenities'
 import { Carousel } from 'react-responsive-carousel'
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import CustomCarousel from '../components/Carousel';
 import ContactUsButton from '../components/ContactUsButton';
