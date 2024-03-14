@@ -11,7 +11,10 @@ module.exports = {
             },
             colors: {
                 text: "#2D7322",
-                pagebg: "#F9FDF8"
+                pagebg: "#F9FDF8",
+                secondary: "#423C36",
+                primary: "#D6D6D6",
+                tertiary: "#1F2516"
             },
         },
     },
