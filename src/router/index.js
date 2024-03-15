@@ -24,7 +24,6 @@ export default function Router() {
                 <Route exact path={ABOUT}> <AboutPage /> </Route>
                 <Route exact path={TERRIF}> <TerrifPage /> </Route>
                 <Route exact path={GALLERY}> <GalleryPage /> </Route>
-
             </Switch>
             <Footer />
         </BrowserRouter>

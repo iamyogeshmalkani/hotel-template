@@ -2,14 +2,15 @@ import React from 'react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { getActiveImages } from '../helpers/galleryHelper';
 
 export default function CustomCarousel({ child }) {
     return (
         <Carousel
+            preventMovementUntilSwipeScrollTolerance={true}
             axis='horizontal'
             showArrows={true}
             autoPlay
-            autoFocus
             useKeyboardArrows={true}
             renderArrowPrev={(clickHandler, hasPrev) => {
                 return (
@@ -50,12 +51,15 @@ export default function CustomCarousel({ child }) {
                 );
             }}
         >
-            <div>
-                <img src='images/Hotel1.jpg' className='w-full h-[600px] object-cover ' />
-            </div>
-            <div>
-                <img src='images/Hotel1.jpg' className='w-full h-[600px] object-cover ' />
-            </div>
+            {
+                getActiveImages("Rooms").map((room) => {
+                    return (
+                        <div>
+                            <img src={`images/hotel-images/${room}.jpg`} className='w-full h-[600px] object-cover ' />
+                        </div>
+                    )
+                })
+            }
         </Carousel>
     )
 }
