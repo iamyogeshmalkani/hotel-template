@@ -1,12 +1,12 @@
 const NAVBARPAGES = [
     "Home", "About", "Gallery", "Contact", "Terrif",
 ]
-const HOTEL_NAME = "The Nature's Green Resort, Bhimtal";
-const HOTEL_ADDRESS = "Sattal Rd, near Nal Damyanti Tal, Bhimtal, Bhagtpura, Uttarakhand - 263136";
-const HOTEL_MAIL1 = " nainital@hellohotelsindia.com";
-const HOTEL_MAIL2 = "  thenaturesgreenresort@gmail.com";
-const HOTEL_PHONE1 = "+91 9999296503";
-const HOTEL_PHONE2 = "+91 9999296503";
+const HOTEL_NAME = "The Yog Guru Resort, Nomtal";
+const HOTEL_ADDRESS = "Some Rd, near Some place, Famous Place, Dholakpur, State - 123456";
+const HOTEL_MAIL1 = " hotel@hotelindia.com";
+const HOTEL_MAIL2 = "  yogeshvilla@gmail.com";
+const HOTEL_PHONE1 = "+91 1234567890";
+const HOTEL_PHONE2 = "+91 0987654321";
 
 const ABOUT_US_DESCRIPTION = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 
