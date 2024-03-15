@@ -5,7 +5,7 @@ import { FaPhoneAlt } from 'react-icons/fa'
 
 export default function HotelAddressAndContactSection() {
     return (
-        <div className=' font-Lora w-full flex flex-col gap-5 bg-secondary py-5 text-primary'>
+        <div className=' font-Lora w-full flex flex-col gap-5 bg-secondary py-5 text-primary px-2'>
             <p className='max-md:text-sm'>{HOTEL_ADDRESS}</p>
             <div className='flex flex-row justify-center flex-wrap gap-4 text-sm'>
                 <div className='flex flex-row gap-2 items-center'>
