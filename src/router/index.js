@@ -1,4 +1,4 @@
-import { ABOUT, CONTACT, HOME, TERRIF } from "./routes";
+import { ABOUT, CONTACT, GALLERY, HOME, TERRIF } from "./routes";
 import HomePage from "../pages/HomePage";
 import ContactPage from "../pages/ContactPage";
 import AboutPage from "../pages/AboutPage";
@@ -10,6 +10,7 @@ import {
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import TerrifPage from "../pages/TerrifPage";
+import GalleryPage from "../pages/GalleryPage";
 
 
 
@@ -22,6 +23,8 @@ export default function Router() {
                 <Route exact path={CONTACT}> <ContactPage /> </Route>
                 <Route exact path={ABOUT}> <AboutPage /> </Route>
                 <Route exact path={TERRIF}> <TerrifPage /> </Route>
+                <Route exact path={GALLERY}> <GalleryPage /> </Route>
+
             </Switch>
             <Footer />
         </BrowserRouter>

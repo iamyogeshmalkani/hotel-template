@@ -20,7 +20,7 @@ export default function HotelAmenities() {
                     }
                 </div>
             </div>
-            <img src='images/hotel-amenities.jpg' className='object-contain rounded-xl w-[40%] max-md:w-[90%]'></img>
+            <img src='images/hotel-amenities.jpg' className='object-contain self-center rounded-xl w-[40%] max-md:w-[90%]'></img>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 const NAVBARPAGES = [
-    "Home", "About", "Gallery", "Contact", "Terrif"
+    "Home", "About", "Gallery", "Contact", "Terrif",
 ]
 const HOTEL_NAME = "The Nature's Green Resort, Bhimtal";
 const HOTEL_ADDRESS = "Sattal Rd, near Nal Damyanti Tal, Bhimtal, Bhagtpura, Uttarakhand - 263136";
@@ -20,6 +20,16 @@ const HOTEL_TERRIFFS = {
     "Super Deluxe Room": "6000"
 }
 
+const ROOM_CATEGORIES = ["All Photos", "Rooms", "Out Door", "Reception", "Dining"]
+
+const TOTAL_ROOMS_BY_CATEGORY = {
+    "all": 10,
+    "room": 3,
+    "outdoor": 2,
+    "reception": 2,
+    "dining": 3
+}
 
 
-export { NAVBARPAGES, HOTEL_ADDRESS, HOTEL_MAIL1, HOTEL_MAIL2, HOTEL_PHONE1, HOTEL_PHONE2, HOTEL_NAME, ABOUT_US_DESCRIPTION, HOTEL_AMENITIES, HOTEL_ROOM_TYPES, HOTEL_TERRIFFS }
+
+export { NAVBARPAGES, HOTEL_ADDRESS, HOTEL_MAIL1, HOTEL_MAIL2, HOTEL_PHONE1, HOTEL_PHONE2, HOTEL_NAME, ABOUT_US_DESCRIPTION, HOTEL_AMENITIES, HOTEL_ROOM_TYPES, HOTEL_TERRIFFS, ROOM_CATEGORIES, TOTAL_ROOMS_BY_CATEGORY }

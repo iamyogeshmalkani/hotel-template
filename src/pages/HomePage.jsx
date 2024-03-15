@@ -2,6 +2,7 @@ import React from 'react'
 import CustomCarousel from '../components/Carousel'
 import HotelAmenities from '../components/HotelAmenities'
 import HotelAddressAndContactSection from '../components/HotelAddressAndContactSection'
+import GalleryPreview from '../components/GalleryPreview'
 
 export default function HomePage() {
     return (
@@ -12,6 +13,9 @@ export default function HomePage() {
             <HotelAddressAndContactSection />
             <div className='w-[100%] bg-primary'>
                 <HotelAmenities />
+            </div>
+            <div className='w-[100%] flex justify-center'>
+                <GalleryPreview />
             </div>
         </div>
     )

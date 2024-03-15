@@ -1,14 +1,18 @@
 import React from 'react'
 import TerrifTable from '../components/TerrifTable'
-import ContactUsButton from '../components/ContactUsButton'
+import { IoMdContact } from 'react-icons/io'
+import CustomButton from '../components/CustomButton'
 
 export default function TerrifPage() {
+    const onButtonClick = () => {
+        window.open("/About")
+    }
     return (
         <div className='py-10 flex flex-col justify-center items-center'>
             <div className='w-[60%] max-md:w-[90%]'>
                 <TerrifTable />
             </div>
-            <ContactUsButton />
+            <CustomButton text={"Contact Us"} icon={<IoMdContact size={35} />} onClickHandler={onButtonClick} />
         </div>
     )
 }
