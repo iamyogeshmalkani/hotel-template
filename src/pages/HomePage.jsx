@@ -42,7 +42,7 @@ export default function HomePage() {
                 </div>
             </div>
             <FloatingButton clickHandler={onCLickHandler} >
-                <img className='w-[65px] object-cover' src='images/whatsapp.webp' />
+                <img className='w-[65px] object-cover max-md:w-[50px]' src='images/whatsapp.webp' />
             </FloatingButton>
         </div >
     )
