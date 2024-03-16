@@ -6,7 +6,7 @@ import { IoMdImages } from 'react-icons/io'
 export default function GalleryPreview() {
 
     const onButtonClick = () => {
-        window.open("/Gallery")
+        window.open("/Gallery", "_self")
     }
     return (
         <div className='w-[90%] flex flex-col gap-10  py-10 self-center font-Lora'>

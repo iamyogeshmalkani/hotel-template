@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { getActiveImages } from '../helpers/galleryHelper';
 
-export default function CustomCarousel({ child }) {
+export default function CustomCarousel({ children }) {
     return (
         <Carousel
             preventMovementUntilSwipeScrollTolerance={true}
@@ -52,13 +52,7 @@ export default function CustomCarousel({ child }) {
             }}
         >
             {
-                getActiveImages("Rooms").map((room) => {
-                    return (
-                        <div>
-                            <img src={`images/hotel-images/${room}.jpg`} className='w-full h-[600px] object-cover ' />
-                        </div>
-                    )
-                })
+                children
             }
         </Carousel>
     )

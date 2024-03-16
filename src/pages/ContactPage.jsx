@@ -11,7 +11,7 @@ const ContactPage = () => {
     return (
         <div className="flex flex-col gap-6 py-10 justify-center items-center font-Lora max-md:flex-col w-full bg-pagebg">
             <div className='flex flex-row max-md:flex-col justify-center items-center gap-10 w-full'>
-                <img src='images/hotelFront.jpg' className='max-md:w-[80%] w-[40%]'></img>
+                <img src='/images/hotelFront.jpg' className='max-md:w-[80%] w-[40%]'></img>
                 <div className='flex flex-col items-start gap-4 w-[40%] max-md:w-[80%]'>
                     <p className='text-secondary'>{HOTEL_NAME}</p>
                     <div className='flex flex-row gap-5 items-center'>
