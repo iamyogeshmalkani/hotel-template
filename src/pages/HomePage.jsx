@@ -9,19 +9,23 @@ import { getActiveImages } from '../helpers/galleryHelper'
 
 export default function HomePage() {
 
+    const [selectedIndex, setSelectedIndex] = React.useState(0);
+
+    const handleOnChange = index => {
+        setSelectedIndex(index);
+    };
+
     const onCLickHandler = () => {
         window.open(`https://wa.me/${HOTEL_PHONE1}`, "_self")
     }
     return (
         <div className='flex flex-col justify-center items-center'>
             <div className='w-[100%] mt-[-5rem]'>
-                <CustomCarousel >
+                <CustomCarousel onChangeHandler={handleOnChange} >
                     {
-                        getActiveImages("Rooms").map((room) => {
+                        getActiveImages("Rooms").map((room, ind) => {
                             return (
-                                <div>
-                                    <img src={`images/hotel-images/${room}.jpg`} className='w-full h-[600px] object-cover ' />
-                                </div>
+                                <img src={`images/hotel-images/${room}.jpg`} className={`${selectedIndex === ind ? 'zoom-in-out' : ''} w-full h-[600px] object-cover`} />
                             )
                         })
                     }
@@ -32,7 +36,7 @@ export default function HomePage() {
                 <img src='/images/hotelbg.jpg' className='fixed top-0 left-0 w-full h-full z-[-10] object-cover' />
                 <div className='w-[100%] flex flex-col gap-10 items-center py-20 max-md:py-10 z-10 bg-primary'>
                     <HotelAmenities amenities={HOTEL_AMENITIES} heading={"Amenities Tailored for Your Convenience"} />
-                    <img src='/images/hotel-amenities.jpg' className='object-contain self-center rounded-xl w-[40%] max-md:w-[90%]'></img>
+                    {/* <img src='/images/hotel-amenities.jpg' className='object-contain self-center rounded-xl w-[40%] max-md:w-[90%]'></img> */}
                 </div>
                 {/* <div className='w-full z-0 absolute'>
                 <img src='images/hotelbg.jpg' className='w-full' />

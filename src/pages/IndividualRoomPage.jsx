@@ -30,11 +30,9 @@ export default function IndividualRoomPage() {
                 </div>
                 <p className=' w-[80%] text-sm max-md:text-xs text-left leading-6'>{HOTEL_ROOM_TYPES_AND_INFO[roomType].description}</p>
             </div>
-            <div className='w-[100%] flex flex-col gap-10 mt-[300px] max-md:mt-[200px]'>
-                <div className='w-full flex flex-col gap-10 items-center py-20 max-md:py-10 z-10 bg-primary'>
-                    <HotelAmenities amenities={HOTEL_ROOM_TYPES_AND_INFO[roomType].amenities} heading={"Room Amenities"} />
-                    {/* <img src='/images/hotel-amenities.jpg' className='object-contain self-center rounded-xl w-[40%] max-md:w-[90%]'></img> */}
-                </div>
+            <div className='w-full flex flex-col gap-10 items-center py-20 max-md:py-10 z-10 mt-[300px] max-md:mt-[200px] bg-primary'>
+                <HotelAmenities amenities={HOTEL_ROOM_TYPES_AND_INFO[roomType].amenities} heading={"Room Amenities"} />
+                {/* <img src='/images/hotel-amenities.jpg' className='object-contain self-center rounded-xl w-[40%] max-md:w-[90%]'></img> */}
             </div>
         </div>
     )

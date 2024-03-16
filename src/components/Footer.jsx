@@ -36,7 +36,7 @@ export default function Footer() {
                 <div className='flex flex-row gap-4'>
                     {NAVBARPAGES.map((page) => {
                         return (
-                            <p className='max-md:text-sm'>{page}</p>
+                            <p onClick={() => { window.open(page, "_self") }} className='max-md:text-sm'>{page}</p>
                         )
                     })}
                 </div>
