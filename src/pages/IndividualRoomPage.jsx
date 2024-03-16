@@ -16,7 +16,7 @@ export default function IndividualRoomPage() {
             <img src='/images/roomamentitesbg.jpg' className='fixed w-full h-full object-cover top-[5rem] left-0 z-[-10]' />
             <div className='w-full flex flex-col gap-10 items-center py-10  max-md:w-[100%] bg-white'>
                 <p className='text-3xl max-md:text-xl'>{roomType}</p>
-                <div className='w-[70%]'>
+                <div className='w-[70%] max-md:w-[90%]'>
                     <CustomCarousel>
                         {
                             HOTEL_ROOM_TYPES_AND_INFO[roomType].photos.map((photo) => {
@@ -28,7 +28,7 @@ export default function IndividualRoomPage() {
                         }
                     </CustomCarousel>
                 </div>
-                <p className=' w-[80%] text-sm max-md:text-xs text-left leading-6'>{HOTEL_ROOM_TYPES_AND_INFO[roomType].description}</p>
+                <p className='w-[80%] max-md:w-[90%] text-sm max-md:text-xs text-left leading-6'>{HOTEL_ROOM_TYPES_AND_INFO[roomType].description}</p>
             </div>
             <div className='w-full flex flex-col gap-10 items-center py-20 max-md:py-10 z-10 mt-[300px] max-md:mt-[200px] bg-primary'>
                 <HotelAmenities amenities={HOTEL_ROOM_TYPES_AND_INFO[roomType].amenities} heading={"Room Amenities"} />
