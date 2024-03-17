@@ -25,7 +25,7 @@ export default function HomePage() {
                     {
                         getActiveImages("Rooms").map((room, ind) => {
                             return (
-                                <img src={`images/hotel-images/${room}.jpg`} className={`${selectedIndex === ind ? 'zoom-in-out' : ''} w-full h-[600px] object-cover`} />
+                                <img loading="lazy" key={room} alt={room} src={`images/hotel-images/${room}.jpg`} className={`${selectedIndex === ind ? 'zoom-in-out' : ''} w-full h-[600px] object-cover`} />
                             )
                         })
                     }
@@ -33,20 +33,20 @@ export default function HomePage() {
             </div>
             <HotelAddressAndContactSection />
             <div className="flex flex-col w-full gap-[320px] max-md:gap-[200px]">
-                <img src='/images/hotelbg.jpg' className='fixed top-0 left-0 w-full h-full z-[-10] object-cover' />
+                <img loading="lazy" alt='hotel-image' src='/images/hotelbg.jpg' className='fixed top-0 left-0 w-full h-full z-[-10] object-cover' />
                 <div className='w-[100%] flex flex-col gap-10 items-center py-20 max-md:py-10 z-10 bg-primary'>
                     <HotelAmenities amenities={HOTEL_AMENITIES} heading={"Amenities Tailored for Your Convenience"} />
-                    {/* <img src='/images/hotel-amenities.jpg' className='object-contain self-center rounded-xl w-[40%] max-md:w-[90%]'></img> */}
+                    {/* <img loading="lazy"   src='/images/hotel-amenities.jpg' className='object-contain self-center rounded-xl w-[40%] max-md:w-[90%]'></img> */}
                 </div>
                 {/* <div className='w-full z-0 absolute'>
-                <img src='images/hotelbg.jpg' className='w-full' />
+                <img loading="lazy"   src='images/hotelbg.jpg' className='w-full' />
             </div> */}
                 <div className='w-[100%] z-10 flex justify-center bg-primary'>
                     <GalleryPreview />
                 </div>
             </div>
             <FloatingButton clickHandler={onCLickHandler} >
-                <img className='w-[65px] object-cover max-md:w-[50px]' src='images/whatsapp.webp' />
+                <img loading="lazy" alt='whatsapp' className='w-[65px] object-cover max-md:w-[50px]' src='images/whatsapp.webp' />
             </FloatingButton>
         </div >
     )

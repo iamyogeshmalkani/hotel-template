@@ -13,7 +13,7 @@ export default function IndividualRoomPage() {
     return (
         <div className='w-full flex flex-col items-center font-Lora'>
             <ClickableCategoriesSection categories={Object.keys(HOTEL_ROOM_TYPES_AND_INFO)} activeCategory={roomType} clickHandler={clickHandler} />
-            <img src='/images/roomamentitesbg.jpg' className='fixed w-full h-full object-cover top-[5rem] left-0 z-[-10]' />
+            <img loading="lazy" alt='hotel-benifits' src='/images/roomamentitesbg.jpg' className='fixed w-full h-full object-cover top-[5rem] left-0 z-[-10]' />
             <div className='w-full flex flex-col gap-10 items-center py-10  max-md:w-[100%] bg-white'>
                 <p className='text-3xl max-md:text-xl'>{roomType}</p>
                 <div className='w-[70%] max-md:w-[90%]'>
@@ -21,7 +21,7 @@ export default function IndividualRoomPage() {
                         {
                             HOTEL_ROOM_TYPES_AND_INFO[roomType].photos.map((photo) => {
                                 return (
-                                    <img src={`/images/room-types/${photo}.jpg`} className='w-full' />
+                                    <img loading="lazy" key={photo} alt={photo} src={`/images/room-types/${photo}.jpg`} className='w-full' />
                                 )
                             }
                             )
@@ -32,7 +32,7 @@ export default function IndividualRoomPage() {
             </div>
             <div className='w-full flex flex-col gap-10 items-center py-20 max-md:py-10 z-10 mt-[300px] max-md:mt-[200px] bg-primary'>
                 <HotelAmenities amenities={HOTEL_ROOM_TYPES_AND_INFO[roomType].amenities} heading={"Room Amenities"} />
-                {/* <img src='/images/hotel-amenities.jpg' className='object-contain self-center rounded-xl w-[40%] max-md:w-[90%]'></img> */}
+                {/* <img loading="lazy"   src='/images/hotel-amenities.jpg' className='object-contain self-center rounded-xl w-[40%] max-md:w-[90%]'></img> */}
             </div>
         </div>
     )

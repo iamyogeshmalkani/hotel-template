@@ -42,7 +42,7 @@ export default function CustomCarousel({ children, onChangeHandler }) {
             showThumbs={false}
             renderIndicator={(onClickHandler, isSelected, index, label) => {
                 return (
-                    <div
+                    <li
                         className={`ml-4 cursor-pointer inline-block rounded-[50%] h-3 w-3 max-md:h-3 max-md:w-3 shadow-lg ${isSelected ? 'bg-gray-500' : 'bg-white'}`}
                         onClick={onClickHandler}
                         onKeyDown={onClickHandler}
@@ -52,7 +52,7 @@ export default function CustomCarousel({ children, onChangeHandler }) {
                         tabIndex={0}
                         aria-label={`${label} ${index + 1}`}
                     >
-                    </div>
+                    </li>
                 );
             }}
         >

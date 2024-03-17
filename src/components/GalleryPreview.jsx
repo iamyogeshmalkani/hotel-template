@@ -13,7 +13,7 @@ export default function GalleryPreview() {
             <p className='text-3xl max-md:text-xl underline'>Gallery</p>
             <div className='flex flex-row flex-wrap justify-center gap-5'>
                 {getActiveImages("Rooms").map((image) => {
-                    return (<img src={`images/hotel-images/${image}.jpg`} className=' cursor-pointer w-[280px] max-md:w-[200px]' />)
+                    return (<img loading="lazy" key={image} alt='rooms-image' src={`images/hotel-images/${image}.jpg`} className=' cursor-pointer w-[280px] max-md:w-[200px]' />)
                 })}
             </div>
             <div className='w-full flex justify-end'>

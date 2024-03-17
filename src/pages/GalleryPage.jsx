@@ -18,14 +18,14 @@ export default function GalleryPage() {
     return (
         <div className='w-full flex flex-col pb-20 font-Lora justify-center items-center'>
             {imageForModal && <CustomModal closeModal={closeModal}>
-                <img src={`images/hotel-images/${imageForModal}.jpg`} className='w-[100%]' />
+                <img loading="lazy" alt={imageForModal} src={`images/hotel-images/${imageForModal}.jpg`} className='w-[100%]' />
             </CustomModal>}
             <ClickableCategoriesSection activeCategory={activeImageCategory} categories={ROOM_CATEGORIES} clickHandler={clickHandler} />
             <div className='w-[90%] max-md:w-[100%] flex flex-col gap-10 items-center bg-primary py-10'>
                 <p className='text-3xl max-md:text-xl'>{activeImageCategory}</p>
                 <div className='flex flex-row flex-wrap justify-center gap-5'>
                     {getActiveImages(activeImageCategory).map((image) => {
-                        return (<img src={`images/hotel-images/${image}.jpg`} className=' cursor-pointer w-[280px] max-md:w-[200px]' onClick={() => { setImageForModal(image) }} />)
+                        return (<img loading="lazy" key={image} alt={image} src={`images/hotel-images/${image}.jpg`} className=' cursor-pointer w-[280px] max-md:w-[200px]' onClick={() => { setImageForModal(image) }} />)
                     })}
                 </div>
             </div>

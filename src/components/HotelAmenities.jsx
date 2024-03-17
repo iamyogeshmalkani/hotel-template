@@ -1,5 +1,4 @@
 import React from 'react'
-import { HOTEL_AMENITIES } from '../constants'
 import { getLogoByText } from '../utils/utils'
 
 export default function HotelAmenities({ heading, amenities }) {
@@ -10,8 +9,8 @@ export default function HotelAmenities({ heading, amenities }) {
                 {
                     amenities.map((am) => {
                         return (
-                            <div className='flex flex-col gap-3 max-md:gap-2 mt-10 justify-center items-center w-[200px] max-md:w-[160px]'>
-                                <img src={`/icons/${getLogoByText(am)}.svg`} className='w-8 text-secondary font-semibold' />
+                            <div key={am} className='flex flex-col gap-3 max-md:gap-2 mt-10 justify-center items-center w-[200px] max-md:w-[160px]'>
+                                <img loading="lazy" alt={am} src={`/icons/${getLogoByText(am)}.svg`} className='w-8 text-secondary font-semibold' />
                                 <p className='max-md:text-sm'>{am}</p>
                             </div>
                         )

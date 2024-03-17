@@ -19,14 +19,12 @@ export default function AboutPage() {
                     <p className='font-Lora text-3xl max-md:text-xl text-tertiary'>About {HOTEL_NAME}</p>
                     <p className='max-md:text-sm text-left text-gray-500'>{ABOUT_US_DESCRIPTION}</p>
                 </div>
-                <div className='w-[50%] max-md:w-[90%] max-md:w-full z-0'>
+                <div className='w-[50%]  max-md:w-full z-0'>
                     <CustomCarousel >
                         {
                             getActiveImages("Rooms").map((room) => {
                                 return (
-                                    <div>
-                                        <img src={`images/hotel-images/${room}.jpg`} className='w-full h-[500px] max-md:h-[400px] object-cover rounded-xl ' />
-                                    </div>
+                                    <img loading="lazy" key={room} alt={room} src={`images/hotel-images/${room}.jpg`} className='w-full h-[500px] max-md:h-[400px] object-cover rounded-xl ' />
                                 )
                             })
                         }
@@ -34,8 +32,8 @@ export default function AboutPage() {
                 </div>
             </div>
             <div className=' flex flex-col gap-10 py-20 max-md:py-10 items-center w-full bg-primary'>
-                <HotelAmenities amenities={HOTEL_AMENITIES} heading={"Amenities With Room"} />
-                {/* <img src='/images/hotel-amenities.jpg' className='object-contain self-center rounded-xl w-[40%] max-md:w-[90%]'></img> */}
+                <HotelAmenities amenities={HOTEL_AMENITIES} heading={"Amenities For You"} />
+                {/* <img loading="lazy"   src='/images/hotel-amenities.jpg' className='object-contain self-center rounded-xl w-[40%] max-md:w-[90%]'></img> */}
             </div>
             <CustomButton text={"Contact Us"} icon={<IoMdContact size={35} />} onClickHandler={onButtonClick} />
         </div>

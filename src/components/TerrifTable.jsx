@@ -14,7 +14,7 @@ export default function TerrifTable() {
                 {
                     HOTEL_ROOM_TYPES.map((room) => {
                         return (
-                            <tr className='border'>
+                            <tr key={room} className='border'>
                                 <td className='py-1 font-semibold border-r text-xl max-md:text-lg'>{room}</td>
                                 <td className='py-1 font-semibold border-r text-xl max-md:text-lg'>{HOTEL_TERRIFFS[room]}</td>
                             </tr>
