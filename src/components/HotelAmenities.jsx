@@ -6,7 +6,7 @@ export default function HotelAmenities({ heading, amenities }) {
     return (
         <div className='flex flex-col font-Lora flex-wrap w-[80%] max-md:w-[90%]'>
             <p className=' text-3xl max-md:text-xl '>{heading}</p>
-            <div className='flex flex-row flex-wrap mt-5 max-w-full justify-start max-md:flex-row '>
+            <div className='flex flex-row flex-wrap mt-5 max-w-full justify-center max-md:flex-row '>
                 {
                     amenities.map((am) => {
                         return (

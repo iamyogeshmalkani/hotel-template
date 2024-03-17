@@ -33,7 +33,7 @@ export default function Navbar() {
                                         if (page === "Home") {
                                             window.location.href = "/"
                                         } else {
-                                            window.location.href = page
+                                            window.location.href = `/${page}`
                                         }
                                     }}
                                 > {page}</p>

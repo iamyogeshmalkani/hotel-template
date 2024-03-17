@@ -14,18 +14,18 @@ export default function AboutPage() {
     return (
         <div className='flex flex-col gap-10 justify-center items-center py-10'>
 
-            <div className='w-[90%] flex flex-row items-start gap-10'>
-                <div className='w-[50%] flex flex-col gap-14 items-start'>
+            <div className='w-[90%] flex flex-row max-md:flex-col justify-center items-start gap-10'>
+                <div className='w-[50%] max-md:w-[90%] flex flex-col gap-14 items-start'>
                     <p className='font-Lora text-3xl max-md:text-xl text-tertiary'>About {HOTEL_NAME}</p>
                     <p className='max-md:text-sm text-left text-gray-500'>{ABOUT_US_DESCRIPTION}</p>
                 </div>
-                <div className='w-[50%] max-md:w-full z-0'>
+                <div className='w-[50%] max-md:w-[90%] max-md:w-full z-0'>
                     <CustomCarousel >
                         {
                             getActiveImages("Rooms").map((room) => {
                                 return (
                                     <div>
-                                        <img src={`images/hotel-images/${room}.jpg`} className='w-full h-[500px] object-cover rounded-xl ' />
+                                        <img src={`images/hotel-images/${room}.jpg`} className='w-full h-[500px] max-md:h-[400px] object-cover rounded-xl ' />
                                     </div>
                                 )
                             })
