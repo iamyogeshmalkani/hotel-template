@@ -4,7 +4,7 @@ import { IoIosMail } from 'react-icons/io'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa6'
 import DesignBySection from './DesignBySection'
-
+import { Link } from "react-router-dom"
 export default function Footer() {
     return (
         <footer className=' font-Lora flex flex-col gap-10 pt-10 justify-center items-center w-full font-normal bg-secondary text-primary'>
@@ -36,7 +36,7 @@ export default function Footer() {
                 <div className='flex flex-row gap-4'>
                     {NAVBARPAGES.map((page) => {
                         return (
-                            <p key={page} onClick={() => { window.open(page, "_self") }} className='max-md:text-sm'>{page}</p>
+                            <a key={page} href={"/" + page} className='max-md:text-sm'>{page}</a>
                         )
                     })}
                 </div>
