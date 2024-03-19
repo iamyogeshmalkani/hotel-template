@@ -20,7 +20,7 @@ code {
 
 
 .zoom-in-out {
-    animation: zoom-in-zoom-out 4s infinite;
+    animation: zoom-in-zoom-out 6s infinite;
 }
 
 @keyframes zoom-in-zoom-out {

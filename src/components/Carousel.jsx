@@ -7,6 +7,7 @@ import { getActiveImages } from '../helpers/galleryHelper';
 export default function CustomCarousel({ children, onChangeHandler }) {
     return (
         <Carousel
+            dynamicHeight={true}
             onChange={onChangeHandler}
             interval={3000}
             transitionTime={500}
@@ -43,7 +44,7 @@ export default function CustomCarousel({ children, onChangeHandler }) {
             renderIndicator={(onClickHandler, isSelected, index, label) => {
                 return (
                     <li
-                        className={`ml-4 cursor-pointer inline-block rounded-[50%] h-3 w-3 max-md:h-3 max-md:w-3 shadow-lg ${isSelected ? 'bg-gray-500' : 'bg-white'}`}
+                        className={`ml-4 mb-10 cursor-pointer z-10 inline-block rounded-[50%] h-3 w-3 max-md:h-3 max-md:w-3 shadow-lg ${isSelected ? 'bg-gray-500' : 'bg-white'}`}
                         onClick={onClickHandler}
                         onKeyDown={onClickHandler}
                         value={index}

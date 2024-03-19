@@ -5,7 +5,7 @@ import CustomButton from '../components/CustomButton'
 
 export default function TerrifPage() {
     const onButtonClick = () => {
-        window.open("/About", "_self")
+        window.open("/Contact", "_self")
     }
     return (
         <div className='py-10 flex flex-col justify-center items-center'>

@@ -28,6 +28,7 @@ export default function AboutPage() {
                                 )
                             })
                         }
+
                     </CustomCarousel>
                 </div>
             </div>
